@@ -1,8 +1,8 @@
-
+import styles from "./MealsSummary.module.css";
 
 export default function MealsSummary(){
     return (
-        <section>
+        <section className={styles.summary}>
             <h2>Delicios Food, Delivered To You</h2>
             <p>
                 Choose your favorite meal from our broad selection of available meals
