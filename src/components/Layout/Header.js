@@ -6,11 +6,11 @@ import mealsImage from "../../assets/meals.jpeg";
 export default function Header(props){
     return (
         <Fragment>
-            <header>
+            <header className={styles.header}>
                 <h1>Food Orders</h1>
                 <button>Cart</button>
             </header>
-            <div>
+            <div className={styles.main-image}>
                 <img src={mealsImage} alt="Table filled with food"/>
             </div>
         </Fragment>
