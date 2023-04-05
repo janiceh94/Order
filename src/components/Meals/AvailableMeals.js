@@ -1,3 +1,4 @@
+import styles from "./AvailableMeals.module.css";
 
 const DUMMY_MEALS = [
     {
@@ -25,9 +26,17 @@ const DUMMY_MEALS = [
       price: 18.99,
     },
   ];
-  
+
 export default function AvailableMeals(){
+    const mealsList = DUMMY_MEALS.map(meal => 
+            <li>{meal.name}</li>
+        );
+
     return (
-        
+        <section className={styles.meals}>
+            <ul>
+                {mealsList}
+            </ul>
+        </section>
     )
 }
