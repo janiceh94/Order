@@ -1,4 +1,5 @@
 import styles from "./MealItem.module.css";
+import MealItemForm from "./MealItemForm";
 
 export default function MealItem(props) {
     //Only use 2 decimal places
@@ -12,7 +13,7 @@ export default function MealItem(props) {
                 <div className={styles.price}>{price}</div>
             </div>
             <div>
-                
+                <MealItemForm/>
             </div>
         </li>
     )
