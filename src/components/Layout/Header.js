@@ -10,7 +10,7 @@ export default function Header(props){
                 <h1>Food Orders</h1>
                 <button>Cart</button>
             </header>
-            <div className={styles.main-image}>
+            <div className={styles[`main-image`]}>
                 <img src={mealsImage} alt="Table filled with food"/>
             </div>
         </Fragment>
