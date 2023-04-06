@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./MealItemForm.module.css";
 import Input from "../../UI/Input";
 
@@ -16,7 +16,7 @@ export default function MealItemForm(props){
         
         // trim - remove white space
         if(
-            enteredAmount.trim().length === 0 || enteredAmountNum < 1 || enteredAmountNum > 5
+            enteredAmount.trim().length === 0 || enteredAmountNum < 0 || enteredAmountNum > 5
             ){
             setAmountIsValid(false);
             return;

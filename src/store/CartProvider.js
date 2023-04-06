@@ -42,7 +42,7 @@ export default function CartProvider(props){
     }
     return(
         // .Provider allows us to wrap any components that should get access to this context
-        <CartContext.Provider>
+        <CartContext.Provider value={cartContext}>
             {props.children}
         </CartContext.Provider>
     )
