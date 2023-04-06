@@ -1,3 +1,5 @@
+Project created following Udemy course "React-The Complete Guide" by Maximilian Schwarzmuller
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
