@@ -9,7 +9,7 @@ export default function Header(props){
         <Fragment>
             <header className={styles.header}>
                 <h1>Food Orders</h1>
-                <HeaderCartButton/>
+                <HeaderCartButton onClick={props.onShowCart}/>
             </header>
             <div className={styles[`main-image`]}>
                 <img src={mealsImage} alt="Table filled with food"/>
