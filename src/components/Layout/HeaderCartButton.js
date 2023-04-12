@@ -28,6 +28,14 @@ export default function HeaderCartButton(props){
             return;
         }
         setBtnBump(true);
+        // clean-up function, when the effect reruns, we clear the timer
+        // set timer to fire after 300ms
+        const timer = setTimeout(() => {
+            setBtnBump(false);
+        }, 300);
+        return () => {
+            clearTimeout(timer);
+        }
         // only items instead of entire context is a dependency
     }, [items]);
 
