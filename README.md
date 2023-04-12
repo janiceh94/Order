@@ -1,5 +1,8 @@
 Project created following Udemy course "React-The Complete Guide" by Maximilian Schwarzmuller
 
+![Screen Shot 2023-04-12 at 3 33 49 PM](https://user-images.githubusercontent.com/93102224/231600882-33b2a33b-7a41-4216-b923-06cfd6977873.png)
+![Screen Shot 2023-04-12 at 3 34 06 PM](https://user-images.githubusercontent.com/93102224/231600922-bd3b40a1-e95b-4e89-bfea-4f1fc187c0eb.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
