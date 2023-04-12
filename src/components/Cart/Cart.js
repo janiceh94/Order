@@ -5,6 +5,7 @@ import CartContext from "../../store/cart-context";
 
 export default function Cart(props){
     const cartContext = useContext(CartContext);
+    const totalAmount = `$${cartContext.totalAmount.toFixed(2)}`;
     const cartItems = (
         <ul className={styles[`cart-items`]}>
             {cartContext.items.map((item) => (
@@ -18,7 +19,7 @@ export default function Cart(props){
             {cartItems}
             <div className={styles.total}>
                 <span>Total Amount</span>
-                <span>Total</span>
+                <span>{totalAmount}</span>
             </div>
             <div className={styles.actions}>
                 <button 
