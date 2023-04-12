@@ -6,6 +6,8 @@ import CartContext from "../../store/cart-context";
 export default function Cart(props){
     const cartContext = useContext(CartContext);
     const totalAmount = `$${cartContext.totalAmount.toFixed(2)}`;
+    const hasItems = cartContext.items.length > 0;
+
     const cartItems = (
         <ul className={styles[`cart-items`]}>
             {cartContext.items.map((item) => (
@@ -28,7 +30,7 @@ export default function Cart(props){
                 >
                     Close
                 </button>
-                <button className={styles.button}>Order</button>
+                {hasItems && <button className={styles.button}>Order</button>}
             </div>
         </Modal>
     )
