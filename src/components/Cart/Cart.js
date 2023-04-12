@@ -13,7 +13,10 @@ export default function Cart(props){
 
     };
     const handleCartItemAdd= (item) => {
-
+        cartContext.addItem({
+            ...item, 
+            amount: 1
+        })
     };
 
     const cartItems = (
@@ -26,7 +29,7 @@ export default function Cart(props){
                         price={item.price}
                         // bind pre-configures a function for future execution and basically allows you to pre-configure the argument that function will receive when it is being executed
                         // onRemove={handleCartItemRemove.bind(null, item.id)}
-                        // onAdd={handleCartItemAdd.bind(null. item)}
+                        onAdd={handleCartItemAdd.bind(null, item)}
                     />
             ))}
         </ul>
