@@ -1,13 +1,17 @@
-// Will always re-render when the context value changes
-import { useContext } from "react";
+// useContext will always re-render when the context value changes
+import { useContext, useEffect, useState } from "react";
 import styles from "./HeaderCartButton.module.css";
 import CartIcon from "../Cart/CartIcon";
 import CartContext from "../../store/cart-context";
 
 export default function HeaderCartButton(props){
+    const [btnBump, setBtnBump] = useState(false);
+
     const cartContext = useContext(CartContext);
+    // object de-structuring to pull out the items from the cart
+    const { items } = cartContext;
     // .reduce executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. Final result if running the reducer across all elements of the array is a single value
-    const numberOfCartItems = cartContext.items.reduce
+    const numberOfCartItems = items.reduce
     // calls two arguments
         // currentNumber - for every item in that array on what you're calling reduce
         // item - item which it is currently having a look at
@@ -16,8 +20,19 @@ export default function HeaderCartButton(props){
         // 0 is starting value
     }, 0);
 
+    
+    const btnClasses = `${styles.button} ${btnBump ? styles.bump : ""}`;
+
+    useEffect(() => {
+        if(items.length === 0){
+            return;
+        }
+        setBtnBump(true);
+        // only items instead of entire context is a dependency
+    }, [items]);
+
     return (
-        <button className={styles.button} onClick={props.onClick}>
+        <button className={btnClasses} onClick={props.onClick}>
             <span className={styles.icon}>
                 <CartIcon/>
             </span>
